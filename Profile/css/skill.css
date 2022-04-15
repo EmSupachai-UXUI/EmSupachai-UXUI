@@ -1,0 +1,88 @@
+@-webkit-keyframes jumpIn {
+    from {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes jumpIn {
+    from {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.chart {
+    overflow: hidden;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    cursor: crosshair;
+}
+
+.chart .jumpIn {
+    animation: jumpIn cubic-bezier(0.92, -0.07, 0.39, 1.6) 600ms;
+    -webkit-animation: jumpIn cubic-bezier(0.92, -0.07, 0.39, 1.6) 600ms;
+    transform-origin: 50% 50%;
+}
+
+.chart .out {
+    position: absolute;
+    margin-left: 40px;
+}
+
+.chart .out p {
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.chart .out ul {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+.chart .out ul li {
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.chart .values {
+    padding: 0px;
+    margin: 20px 0px 20px 0px;
+}
+
+.chart .values li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 20px;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.chart .values li:before {
+    content: "";
+    display: block;
+    float: left;
+    margin: 3px 0 0 -15px;
+    height: 9px;
+    width: 9px;
+}
